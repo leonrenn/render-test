@@ -5,4 +5,5 @@ b = np.array([0.1])
 
 def predict(x):
     x = np.array(x)
-    return float(1 / (1 + np.exp(-(x @ W.T + b))))
+    y = 1 / (1 + np.exp(-(x @ W.T + b)))
+    return float(y[0])
